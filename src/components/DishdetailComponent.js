@@ -14,14 +14,16 @@ class DishDetail extends Component {
       var comments = selectedDish.comments
         }
         return ( 
-          <div className="row">
-            <div className="col-12 col-md-5 m-1">
-              {this.renderDish(selectedDish)}
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-md-5 m-1">
+                {this.renderDish(selectedDish)}
+              </div>
+              <div className="col-12 col-md-5 m-1">
+                {this.renderComments(comments)}
+              </div>          
             </div>
-            <div className="col-12 col-md-5 m-1">
-              {this.renderComments(comments)}
-            </div>          
-          </div>         
+          </div>
         )
       }
 
