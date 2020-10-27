@@ -1,0 +1,36 @@
+Props
+
+App.js
+<Menu dishes={this.state.dishes} />
+- Here the dishes are availalble as props within the Menu Component and can be accessed as this.props.dishes
+
+-NEW-
+MenuComponent.js
+<Dishdetail dish={this.state.dish} comments={this.state.comments} />
+- Here dish is available as props within the Dishdetail Component and can be accessed as this.props.dish, and comments as this.props.comments
+
+Handling Events
+
+<Card onClick={() => this.OnDishSelect(dish)}>
+
+Lifting State up
+
+- Sometimes several components may share the same data
+- Changes to data in one component needs to be reflected to another component
+- Best to move the shared state to a common ancestor component
+
+Lists and Keys
+
+- Lists are handled similar to JavaScript
+	- Example:
+	const menu = this.props.dishes.map((dish => {
+		return{
+			<div key={dish.id}
+				<h1>{dish.name}</h1>
+				<p>{dish.description}</p>
+			</div>
+		};
+	});
+
+- Keys should be given to elements inside the array
+	- Help identify which items have changed, are added or removed
