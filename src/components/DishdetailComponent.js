@@ -54,7 +54,7 @@ import moment from 'moment'
       else{
         return(
         <div>
-          No Comments
+         
         </div>
         );
       };
