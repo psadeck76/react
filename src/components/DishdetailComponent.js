@@ -27,17 +27,17 @@ import moment from 'moment'
       if (comments != null){
           const comm = comments.map((comment) =>{
               return(
-              <div>
-                <ul style={{listStyleType: 'none'}}>
-                  <li>
-                    {comment.comment}
-                  </li>
-                  <br/>
-                  <li>
-                      -- {comment.author}, {moment(comment.date).format('MMMM DD YYYY')}
-                  </li>
-                </ul>
-              </div>
+                <div>
+                  <ul style={{listStyleType: 'none'}}>
+                    <li>
+                      {comment.comment}
+                    </li>
+                    <br/>
+                    <li>
+                        -- {comment.author}, {moment(comment.date).format('MMMM DD YYYY')}
+                    </li>
+                  </ul>
+                </div>
               );
       })
           return(
